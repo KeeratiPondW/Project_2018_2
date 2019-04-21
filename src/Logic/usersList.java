@@ -2,16 +2,16 @@ package Logic;
 
 import java.util.ArrayList;
 
-public class usersList {
+public class UsersList {
 	
-	private ArrayList<users> user;
+	private ArrayList<Users> user;
 	
-	public usersList() {
+	public UsersList() {
 		user = new ArrayList<>();
 		
 	}
 	
-	public void addUsers(users u) {
+	public void addUsers(Users u) {
 		user.add(u);
 	}
 

@@ -7,11 +7,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.layout.VBox;
 
 
-public class passwordField extends VBox{
+public class PasswordInput extends VBox{
 	
 	private PasswordField password;
 	
-	public passwordField(String labelText, String promtText) {
+	public PasswordInput(String labelText, String promtText) {
 		setAlignment(Pos.CENTER_LEFT);
 		setPadding(new Insets(5));
 		setSpacing(10);

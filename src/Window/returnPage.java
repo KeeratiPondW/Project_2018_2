@@ -1,5 +1,5 @@
 package Window;
 
-public class returnPage {
+public class ReturnPage {
 
 }

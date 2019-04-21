@@ -1,6 +1,6 @@
 package Logic;
 
-public class users {
+public class Users {
 		
 	private String name;
 	private String surname;
@@ -10,7 +10,7 @@ public class users {
 	private String question;
 	private String answer;
 	
-	public users(String name, String surname, String username, String password, String question, String answer) {
+	public Users(String name, String surname, String username, String password, String question, String answer) {
 		super();
 		this.name = name;
 		this.surname = surname;

@@ -7,11 +7,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
-public class textField extends VBox{
+public class TextInput extends VBox{
 	
 	private TextField textField;
 	
-	public textField(String labelText, String promptText) {
+	public TextInput(String labelText, String promptText) {
 		setAlignment(Pos.CENTER_LEFT);
 		setPadding(new Insets(5));
 		setSpacing(10);

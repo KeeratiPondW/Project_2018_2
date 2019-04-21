@@ -1,5 +1,5 @@
 package Window;
 
-public class loanPage {
+public class LoanPage {
 
 }

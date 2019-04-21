@@ -8,12 +8,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
-public class secondPage extends VBox{
+public class SecondPage extends VBox{
 	
 	private Button returnBtn;
 	private Button loanBtn;
 	
-    public secondPage() throws FileNotFoundException {
+    public SecondPage() throws FileNotFoundException {
     	
     	Image image = new Image(new FileInputStream("res\\images"));
     	ImageView imageView = new ImageView(image);

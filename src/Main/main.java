@@ -2,7 +2,7 @@ package Main;
 
 import java.io.FileNotFoundException;
 
-import Window.loginPage;
+import Window.LoginPage;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -17,7 +17,7 @@ public class main extends Application {
 		
 		
 		
-		root.getChildren().add(new loginPage());
+		root.getChildren().add(new LoginPage());
 		Scene scene = new Scene(root,400,400);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Progmeth Project");

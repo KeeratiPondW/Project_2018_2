@@ -10,12 +10,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
-public class loginPage extends VBox{
+public class LoginPage extends VBox{
 	
 	private Button signinBtn;
 	private Button loginBtn;
 	
-	public loginPage() throws FileNotFoundException {
+	public LoginPage() throws FileNotFoundException {
 		setAlignment(Pos.CENTER);
 		setPadding(new Insets(5));
 		setSpacing(20);
@@ -30,8 +30,8 @@ public class loginPage extends VBox{
 		loginBtn = new Button("Log IN");
 		
 		getChildren().addAll(imageView,
-				new textField("Username", "Fill your username"),
-				new passwordField("Password", "Fill yout password"),
+				new TextInput("Username", "Fill your username"),
+				new PasswordInput("Password", "Fill yout password"),
 				loginBtn, signinBtn);
 		
 		
