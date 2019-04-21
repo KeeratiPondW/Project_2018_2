@@ -12,6 +12,7 @@ public class SecondPage extends VBox{
 	
 	private Button returnBtn;
 	private Button loanBtn;
+	private Button logoutBtn;
 	
     public SecondPage() throws FileNotFoundException {
     	
@@ -22,8 +23,9 @@ public class SecondPage extends VBox{
     	
     	returnBtn = new Button("RETURN");
     	loanBtn = new Button("HIRE");
+    	logoutBtn = new Button("LOGOUT");
     	
-    	getChildren().addAll(imageView, loanBtn, returnBtn);
+    	getChildren().addAll(imageView, loanBtn, returnBtn, logoutBtn);
     	
     }
 
