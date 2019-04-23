@@ -24,30 +24,30 @@ public class main extends Application {
 		//Scene1
 		LoginPage loginPage = new LoginPage();
 		root.getChildren().add(loginPage);
-		
-		//Scene2
-		SecondPage secondPage = new SecondPage();
-		
-		//Scene signin
-		SigninPage signinPage = new SigninPage();
-		
-		//Scene3 loan
-	    LoanPage loanPage = new LoanPage();
-	    
-	    //Scene4 return
-		ReturnPage returnPage = new ReturnPage();
-		
-		//Scene5 customer
-		CustomerCodePage customerCodePage = new CustomerCodePage();
-		
-	    EventManager event = new EventManager(loginPage, secondPage, loanPage,
-	    		returnPage, signinPage, customerCodePage);
-	    
+//		
+//		//Scene2
+//		SecondPage secondPage = new SecondPage();
+//		
+//		//Scene signin
+//		SigninPage signinPage = new SigninPage();
+//		
+//		//Scene3 loan
+//	    LoanPage loanPage = new LoanPage();
+//	    
+//	    //Scene4 return
+//		ReturnPage returnPage = new ReturnPage();
+//		
+//		//Scene5 customer
+//		CustomerCodePage customerCodePage = new CustomerCodePage();
+//		
+//	    EventManager event = new EventManager(loginPage, secondPage, loanPage,
+//	    		returnPage, signinPage, customerCodePage);
+//	    
 		
 		Scene scene = new Scene(root,400,400);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Progmeth Project");
-		primaryStage.setResizable(false);
+		primaryStage.setResizable(true);
 		primaryStage.show();
 		
 	}

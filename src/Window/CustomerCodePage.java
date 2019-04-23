@@ -9,6 +9,7 @@ import javafx.scene.layout.VBox;
 public class CustomerCodePage extends VBox{
 	
 	private Button nextBtn;
+	private Button backBtn;
 	
 	public CustomerCodePage() {
 		
@@ -17,15 +18,20 @@ public class CustomerCodePage extends VBox{
 		setSpacing(10);
 		
 		nextBtn = new Button("Next");
+		backBtn = new Button("Back");
 		
 		TextField text = new TextField();
 		text.setPromptText("Please Fill Customer Code");
 		
-		getChildren().addAll(text, nextBtn);
+		getChildren().addAll(text, nextBtn, backBtn);
 	}
 	
 	public Button getNextBtn() {
 		return nextBtn;
+	}
+	
+	public Button getBackBtn() {
+		return backBtn;
 	}
 
 }
