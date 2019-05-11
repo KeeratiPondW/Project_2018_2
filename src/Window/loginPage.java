@@ -12,7 +12,6 @@ import javafx.scene.layout.VBox;
 
 public class LoginPage extends VBox{
 	
-	private Button signinBtn;
 	private Button loginBtn;
 	
 	public LoginPage() throws FileNotFoundException {
@@ -25,20 +24,14 @@ public class LoginPage extends VBox{
 		imageView.setFitHeight(55); 
 	    imageView.setFitWidth(50);
 		
-		signinBtn = new Button("Sign IN");
-		
 		loginBtn = new Button("Log IN");
 		
 		getChildren().addAll(imageView,
 				new TextInput("Username", "Fill your username"),
 				new PasswordInput("Password", "Fill yout password"),
-				loginBtn, signinBtn);
+				loginBtn);
 		
 		
-	}
-
-	public Button getSigninBtn() {
-		return signinBtn;
 	}
 
 	public Button getLoginBtn() {

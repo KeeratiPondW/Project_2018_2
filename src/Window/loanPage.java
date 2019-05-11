@@ -1,6 +1,8 @@
 package Window;
 
 
+import Logic.Books;
+import Logic.Dvds;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -34,12 +36,13 @@ public class LoanPage extends HBox{
 	private ListView<Label> listView;
 	private int count = 1;
 	
-	public LoanPage() {
+	public LoanPage(Books b, Dvds d) {
 		setAlignment(Pos.CENTER);
 		setPadding(new Insets(5));
 		setSpacing(10);
 		
-		getChildren().addAll(createdLeftPage(), createdRightPage(price));
+		getChildren().addAll(createdLeftPage(),
+				createdRightPage(b.calculatedTotalPrice() + d.calculatedTotalPrice()));
 		
 	}
 	
@@ -115,7 +118,7 @@ public class LoanPage extends HBox{
 		return root;
 	}
 	
-	private VBox createdRightPage(int price) { 
+	private VBox createdRightPage(double price) { 
 		VBox root = new VBox();
 		root.setSpacing(10);
 		root.setPadding(new Insets(5));

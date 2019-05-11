@@ -11,8 +11,6 @@ public class ReturnPage extends VBox{
 	
 	private Button saveBtn;
 	private Button backBtn;
-//	private ComboBox book;
-//	private ComboBox dvd;
 	
 	public ReturnPage(ComboBox book, int Nbook, ComboBox dvd, int Ndvd) {
 		setAlignment(Pos.CENTER);
