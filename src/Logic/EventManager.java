@@ -15,36 +15,40 @@ import javafx.stage.Stage;
 
 public class EventManager {
 
-	private LoginPage loginPage;
-	private SecondPage secondPage;
-	private LoanPage loanPage;
-	private CustomerCodePage customerCodePage;
-	private ReturnPage returnPage;
+//	private LoginPage loginPage;
+//	private SecondPage secondPage;
+//	private LoanPage loanPage;
+//	private CustomerCodePage customerCodePage;
+//	private ReturnPage returnPage;
 	private CustomerList customerList;
 
-	public EventManager(LoginPage loginPage, SecondPage secondPage, LoanPage loanPage,
-			CustomerCodePage customerCodePage, ReturnPage returnPage, CustomerList customerList) {
-		this.loginPage = loginPage;
-		this.secondPage = secondPage;
-		this.loanPage = loanPage;
-		this.customerCodePage = customerCodePage;
-		this.returnPage = returnPage;
+	public EventManager(
+//			LoginPage loginPage, SecondPage secondPage, LoanPage loanPage,
+//			CustomerCodePage customerCodePage, ReturnPage returnPage,
+			CustomerList customerList) {
+//		this.loginPage = loginPage;
+//		this.secondPage = secondPage;
+//		this.loanPage = loanPage;
+//		this.customerCodePage = customerCodePage;
+//		this.returnPage = returnPage;
 		this.customerList = customerList;
 	}
 
 	// loginPage
 	public void loginButton(Button b, Stage stage, Scene scene, String username, String password) {
 		b.setOnAction(new EventHandler<ActionEvent>() {
-
+			
 			@Override
 			public void handle(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				if (username.equals("Thanapun") && password.equals("Thanapun")) {
+				System.out.println(username.length() + 1);
+				if (username.equals("t") && password.equals("t")) {
 					stage.setScene(scene);
 				} else {
 					Alert alert = new Alert(AlertType.INFORMATION);
 					alert.setContentText("Incorrect username or password");
 					alert.showAndWait();
+					
 				}
 			}
 		});

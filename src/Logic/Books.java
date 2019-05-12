@@ -40,6 +40,10 @@ public class Books extends Item implements Calculatable{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	public ArrayList<String> getLoanedbooks() {
+		return loanedbooks;
+	}
 	
 	
 }

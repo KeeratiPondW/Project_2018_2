@@ -32,6 +32,7 @@ public class LoanPage extends HBox{
 	private Button cancelBtn;
 	private Button addBook;
 	private Button addDvd;
+	private Button okBtn;
 	private ObservableList<Label> dataList = FXCollections.observableArrayList();
 	private ListView<Label> listView;
 	private int count = 1;
@@ -134,8 +135,9 @@ public class LoanPage extends HBox{
 		s.getChildren().add(listView);
 		
 		Label label = new Label("total price : " + price);
+		okBtn = new Button("OK");
 		
-		root.getChildren().addAll(s, label);
+		root.getChildren().addAll(s, label, okBtn);
 		return root;
 	}
 	
@@ -148,6 +150,26 @@ public class LoanPage extends HBox{
 	public void clearData() {
 		dataList.clear();
 		count = 1;
+	}
+
+	public Button getCalculateBtn() {
+		return calculateBtn;
+	}
+
+	public Button getCancelBtn() {
+		return cancelBtn;
+	}
+
+	public Button getAddBook() {
+		return addBook;
+	}
+
+	public Button getAddDvd() {
+		return addDvd;
+	}
+	
+	public Button getOkBtn() {
+		return okBtn;
 	}
 	
 

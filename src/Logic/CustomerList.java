@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class CustomerList {
 	
-	private ArrayList<String> customers = new ArrayList<>();
+	private ArrayList<String> customers;
 	
 	public CustomerList() {
+		customers = new ArrayList<>();
 		
 	}
 	

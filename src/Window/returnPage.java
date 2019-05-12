@@ -1,5 +1,7 @@
 package Window;
 
+import Logic.Books;
+import Logic.Dvds;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -10,17 +12,31 @@ import javafx.scene.layout.VBox;
 public class ReturnPage extends VBox{
 	
 	private Button saveBtn;
-	private Button backBtn;
+	private Button cancelBtn;
 	
-	public ReturnPage(ComboBox book, int Nbook, ComboBox dvd, int Ndvd) {
+	public ReturnPage(Books book, Dvds dvd) {
 		setAlignment(Pos.CENTER);
 		setPadding(new Insets(5));
 		setSpacing(10);
 		
 		saveBtn = new Button("Save");
-		backBtn = new Button("Back");
+		cancelBtn = new Button("Back");
 		
-		getChildren().addAll(createBook(book, Nbook), createDvd(dvd, Ndvd), saveBtn, backBtn);
+		//combobox book
+		ComboBox comboBook = new ComboBox();
+		for(String b : book.getLoanedbooks()) {
+			comboBook.getItems().add(b);
+		}
+		
+		//combobox dvd
+		ComboBox comboDvd = new ComboBox<>();
+		for(String d: dvd.getLoanedDvds()) {
+			comboDvd.getItems().add(d);
+		}
+		
+		
+		getChildren().addAll(createBook(comboBook, book.getLoanedbooks().size()),
+				createDvd(comboDvd, dvd.getLoanedDvds().size()), saveBtn, cancelBtn);
 		
 	}
 	
@@ -57,8 +73,8 @@ public class ReturnPage extends VBox{
 		return saveBtn;
 	}
 
-	public Button getBackBtn() {
-		return backBtn;
+	public Button getCancelBtn() {
+		return cancelBtn;
 	}
 
 }

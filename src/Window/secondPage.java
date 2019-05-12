@@ -16,13 +16,13 @@ public class SecondPage extends VBox{
 	
     public SecondPage() throws FileNotFoundException {
     	
-    	Image image = new Image(new FileInputStream("res\\images"));
+    	Image image = new Image(new FileInputStream("res\\image\\Dogs.jpg"));
     	ImageView imageView = new ImageView(image);
     	imageView.setFitHeight(50);
     	imageView.setFitWidth(50);
     	
     	returnBtn = new Button("RETURN");
-    	loanBtn = new Button("HIRE");
+    	loanBtn = new Button("LOAN");
     	logoutBtn = new Button("LOGOUT");
     	
     	getChildren().addAll(imageView, loanBtn, returnBtn, logoutBtn);
@@ -35,6 +35,10 @@ public class SecondPage extends VBox{
 
 	public Button getLoanBtn() {
 		return loanBtn;
+	}
+	
+	public Button getLogoutBtn() {
+		return logoutBtn;
 	}
     
     

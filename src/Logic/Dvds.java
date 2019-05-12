@@ -37,7 +37,12 @@ public class Dvds extends Item implements Calculatable{
 	@Override
 	public double calculatedTotalPrice() {
 		// TODO Auto-generated method stub
+		
 		return 0;
+	}
+
+	public ArrayList<String> getLoanedDvds() {
+		return loanedDvds;
 	}
 	
 //	"Lady Bird", "The Wizard of Oz", "Citizen Kane",

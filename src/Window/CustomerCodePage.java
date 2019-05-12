@@ -10,6 +10,7 @@ public class CustomerCodePage extends VBox{
 	
 	private Button nextBtn;
 	private Button backBtn;
+	private TextField text;
 	
 	public CustomerCodePage() {
 		
@@ -20,7 +21,7 @@ public class CustomerCodePage extends VBox{
 		nextBtn = new Button("Next");
 		backBtn = new Button("Back");
 		
-		TextField text = new TextField();
+		text = new TextField();
 		text.setPromptText("Please Fill Customer Code");
 		
 		getChildren().addAll(text, nextBtn, backBtn);
@@ -32,6 +33,10 @@ public class CustomerCodePage extends VBox{
 	
 	public Button getBackBtn() {
 		return backBtn;
+	}
+	
+	public String getText() {
+		return text.getText().trim();
 	}
 
 }
